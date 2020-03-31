@@ -1,0 +1,48 @@
+{
+    "habilidades": [ 
+        {
+            "cursos": "C",
+            "nivel": "Bajo - Intermedio",
+            "img" : "./images/svg/c.svg"
+        },
+        {
+            "cursos": "C++",
+            "nivel": "Bajo - Intermedio",
+            "img" : "./images/svg/c++.svg"            
+        },
+        {
+            "cursos": "Java",
+            "nivel": "Intermedio",
+            "img" : "./images/svg/java.svg"
+        },
+        {
+            "cursos": "HTML",
+            "nivel": "Intermedio - Avanzado",
+            "img" : "./images/svg/html.svg"
+        },
+        {
+            "cursos": "CSS",
+            "nivel": "Intermedio - Avanzado",
+            "img" : "./images/svg/css.svg"
+        },
+        {
+            "cursos": "JavaScript",
+            "nivel": "Principiante",
+            "img" : "./images/svg/js.svg"
+        },
+        {
+            "cursos": "Git",
+            "nivel": "",
+            "img" : "./images/svg/git.svg"
+        },
+        {
+            "cursos": "PostgresSQL",
+            "nivel": "Principiante",
+            "img" : "./images/svg/postgres.svg"
+        }
+
+
+        
+
+    ]
+}
