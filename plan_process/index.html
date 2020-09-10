@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto SO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
+        <a class="navbar-brand ml-md-4" href="#">Sistemas Operativos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end pr-md-2 mr-md-4" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./info.html">Informacion</a>
+                <a class="nav-link" data-toggle="modal" data-target="#myModal">Grupo</a>
+            </div>
+        </div>
+    </nav>
+    <div class="modal" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content h-100">
+                <div class="modal-header">
+                    <h5 class="modal-title">Grupo#2</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Carnet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Emmanuel Guerra</td>
+                                <td>0901-18-963</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Fernando Biggs</td>
+                                <td>0901-18-1067</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Ricardo Juarez</td>
+                                <td>0901-18-3783</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Israel Hurtarte</td>
+                                <td>0901-18-1053</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- <div class="modal-footer justify-content-center"    >
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-fluid bg-dark text-center p-4">
+            <h1 class="text-light">First In First Out</h1>
+        </div>
+    </div>
+    <div class="mt-md-3">
+        <div class="container text-center">
+            <h2>Ingresa tus procesos</h2>
+            <table id="input-table" class="table mt-md-3">
+                <thead class="thead-dark">
+                    <th scope="col">Proceso</th>
+                    <th scope="col">Posicion</th>
+                    <th scope="col">Tiempo de Ejecucion</th>
+                    <th scope="col">Tiempo de Servicio</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">P0</th>
+                        <td>0</td>
+                        <td><input class="form-control exectime" type="text" value="5"></td>
+                        <td class="time-serv"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">P1</th>
+                        <td>1</td>
+                        <td><input class="form-control exectime" type="text" value="3"></td>
+                        <td class="time-serv"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+        <div class="container text-center">
+            <input id="btn-add" class="btn btn-dark" type="submit" value="Agregar">
+            <input id="btn-delete" class="btn btn-dark" type="submit" value="Quitar">
+            <input id="btn-go" class="btn btn-dark" type="submit" value="Iniciar Algoritmo">
+        </div>
+    </div>
+    <div class="">
+        <div class="container">
+            <div class="text-center pt-md-4">
+                <p>Tiempo: <span id="timer"></span>seg</p>
+            </div>
+            <div id='fresh' class="pl-md-4">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/optionTable.js" type="module"></script>
+    <script src="./js/draw.js"></script>
+</body>
+
+</html>
