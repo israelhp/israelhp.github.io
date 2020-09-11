@@ -33,3 +33,12 @@ document.getElementById('btn-add').addEventListener('click',e =>{
 document.getElementById('btn-delete').addEventListener('click', e =>{
     deleteRow()
 })
+
+const input = Array.from(document.getElementsByClassName('exectime'))
+
+input.forEach(e =>{
+    e.addEventListener('input', e =>{
+        serviceTime();
+    })
+})
+
